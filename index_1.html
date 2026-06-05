@@ -1,60 +1,747 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    body {background-color: #0b0b0b}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Geeza Pro'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Geeza Pro'; color: #776d5d; -webkit-text-stroke: #776d5d}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.6px 'Geeza Pro'; color: #efe9de; -webkit-text-stroke: #000000; background-color: #bc993c}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.6px 'Geeza Pro'; color: #776d5d; -webkit-text-stroke: #776d5d}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.8px 'Geeza Pro'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Geeza Pro'; color: #776d5d; -webkit-text-stroke: #776d5d}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Geeza Pro'; color: #ea8c8f; -webkit-text-stroke: #ea8c8f; background-color: #d63e44; background-color: rgba(214, 62, 68, 0.071)}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #efe9de; -webkit-text-stroke: #efe9de; min-height: 15.0px}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Geeza Pro'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Geeza Pro'; color: #776d5d; -webkit-text-stroke: #776d5d}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.6px 'Geeza Pro'; color: #efe9de; -webkit-text-stroke: #000000}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #34a25c; min-height: 12.0px}
-    span.s1 {font-kerning: none; background-color: rgba(11, 11, 11, 0.96)}
-    span.s2 {font: 8.6px 'Helvetica Neue'; font-kerning: none; background-color: rgba(11, 11, 11, 0.96)}
-    span.s3 {font: 10.6px '.Apple Color Emoji UI'; font-kerning: none}
-    span.s4 {font: 10.6px 'Helvetica Neue'; font-kerning: none}
-    span.s5 {font-kerning: none}
-    span.s6 {font: 10.6px '.Apple Color Emoji UI'; font-kerning: none; background-color: rgba(11, 11, 11, 0.96)}
-    span.s7 {font: 10.6px 'Helvetica Neue'; font-kerning: none; background-color: rgba(11, 11, 11, 0.96)}
-    span.s8 {font: 22.8px 'Helvetica Neue'; font-kerning: none}
-    span.s9 {font: 11.0px 'Helvetica Neue'; font-kerning: none}
-    span.s10 {font: 10.2px '.Apple Color Emoji UI'; font-kerning: none}
-    span.s11 {font: 10.2px 'Helvetica Neue'; font-kerning: none}
-    span.s12 {font-kerning: none; color: #d63e44; -webkit-text-stroke: 0px #d63e44}
-    span.s13 {font: 10.2px 'Helvetica Neue'; font-kerning: none; color: #d63e44; -webkit-text-stroke: 0px #d63e44}
-    span.s14 {font: 10.8px 'PingFang SC'; font-kerning: none; background-color: #141414}
-    span.s15 {font: 10.8px 'Helvetica Neue'; font-kerning: none; background-color: #141414}
-    span.s16 {font-kerning: none; background-color: #141414}
-    span.s17 {font: 9.8px 'Helvetica Neue'; font-kerning: none; background-color: #141414}
-    span.s18 {font: 9.8px 'Helvetica Neue'; font-kerning: none; color: #bc993c; background-color: #141414; -webkit-text-stroke: 0px #bc993c}
-    span.s19 {font: 11.6px 'Helvetica Neue'; font-kerning: none; background-color: #141414}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مستشاري — استشارات قانونية</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:wght@400;700&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C9A84C;--gold-l:#E8C97A;--gold-d:#7A5C10;
+  --bg:#0C0C0C;--bg2:#141414;--bg3:#1A1A1A;--bg4:#222;
+  --txt:#F2EDE4;--dim:#8A8070;--grn:#3DAE6F;--red:#E05555;
+}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--txt);direction:rtl;min-height:100vh}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;
+  background:rgba(12,12,12,.96);border-bottom:1px solid rgba(201,168,76,.18);
+  position:sticky;top:0;z-index:200;backdrop-filter:blur(12px)}
+.logo{font-family:'Amiri',serif;font-size:1.5rem;color:var(--gold)}
+.logo small{display:block;font-family:'Tajawal',sans-serif;font-size:.72rem;color:var(--dim)}
+.tabs{display:flex;gap:6px}
+.tab{padding:8px 18px;border:1px solid rgba(201,168,76,.25);background:transparent;
+  color:var(--dim);border-radius:6px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.88rem;transition:all .2s}
+.tab:hover{border-color:var(--gold);color:var(--gold)}
+.tab.on{background:var(--gold);color:#000;border-color:var(--gold);font-weight:700}
+.page{max-width:860px;margin:0 auto;padding:48px 24px;display:none}
+.page.on{display:block}
+.page-title{font-family:'Amiri',serif;font-size:1.9rem;color:var(--gold);margin-bottom:6px}
+.page-sub{color:var(--dim);font-size:.92rem;margin-bottom:28px}
+.card{background:var(--bg3);border:1px solid rgba(201,168,76,.15);border-radius:16px;padding:24px;margin-bottom:16px}
+.warn{background:rgba(224,85,85,.07);border:1px solid rgba(224,85,85,.25);border-radius:10px;
+  padding:14px 16px;margin-bottom:16px;font-size:.85rem;color:#f0a0a0;line-height:1.7}
+.warn strong{color:var(--red)}
+.client-bar{display:flex;justify-content:space-between;align-items:center;
+  background:var(--bg4);border:1px solid rgba(201,168,76,.15);border-radius:10px;padding:12px 16px;margin-bottom:16px}
+.client-bar .name{font-weight:700;font-size:.95rem}
+.client-bar .phone{font-size:.82rem;color:var(--grn);margin-top:2px}
+.btn-logout{background:none;border:none;color:var(--dim);cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.8rem}
+.btn-logout:hover{color:var(--red)}
+.draft-item{background:var(--bg4);border:1px solid rgba(201,168,76,.12);border-radius:12px;padding:18px;margin-bottom:12px}
+.draft-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.draft-label{display:flex;align-items:center;gap:8px}
+.draft-title{font-size:.85rem;color:var(--gold);font-weight:700}
+.draft-price{font-size:.75rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);
+  color:var(--gold);padding:2px 10px;border-radius:50px;font-weight:700}
+.btn-del{background:none;border:none;color:var(--dim);cursor:pointer;font-size:1rem}
+.btn-del:hover{color:var(--red)}
+.draft-ta{width:100%;background:var(--bg3);border:1px solid rgba(201,168,76,.2);border-radius:10px;
+  padding:14px;color:var(--txt);font-family:'Tajawal',sans-serif;font-size:.95rem;
+  min-height:100px;resize:vertical;direction:rtl;line-height:1.8}
+.draft-ta:focus{outline:none;border-color:rgba(201,168,76,.5)}
+.draft-ta::placeholder{color:var(--dim)}
+.char-count{font-size:.78rem;color:var(--dim);margin-top:4px;text-align:left}
+.btn-add-q{width:100%;padding:12px;background:transparent;border:1px dashed rgba(201,168,76,.35);
+  border-radius:9px;color:var(--gold);font-family:'Tajawal',sans-serif;font-size:.9rem;cursor:pointer;margin-bottom:16px}
+.btn-add-q:hover{background:rgba(201,168,76,.06)}
+.submit-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.total-label{font-size:.82rem;color:var(--dim)}
+.total-label strong{color:var(--gold)}
+.btn-pay{padding:12px 28px;background:linear-gradient(135deg,var(--gold-d),var(--gold));
+  border:none;border-radius:8px;color:#000;font-family:'Tajawal',sans-serif;font-size:.97rem;font-weight:900;cursor:pointer}
+.btn-pay:disabled{opacity:.38;cursor:not-allowed}
+.q-card{background:var(--bg3);border:1px solid rgba(201,168,76,.13);border-radius:14px;padding:22px;margin-bottom:14px}
+.q-card.answered{border-color:rgba(61,174,111,.2)}
+.q-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.q-client{display:flex;align-items:center;gap:8px}
+.q-av{width:34px;height:34px;background:var(--bg4);border:1px solid rgba(201,168,76,.25);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--gold);font-weight:700}
+.q-name{font-size:.88rem;font-weight:700}
+.q-time{font-size:.76rem;color:var(--dim);margin-top:2px}
+.q-badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge{font-size:.72rem;padding:3px 10px;border-radius:50px;font-weight:700}
+.badge-open{background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.25)}
+.badge-ans{background:rgba(61,174,111,.12);color:var(--grn);border:1px solid rgba(61,174,111,.25)}
+.badge-price{background:rgba(201,168,76,.08);color:var(--gold);border:1px solid rgba(201,168,76,.18)}
+.q-text{font-size:.95rem;line-height:1.75;margin-bottom:14px}
+.ans-box{background:var(--bg2);border:1px solid rgba(61,174,111,.15);border-radius:10px;padding:16px}
+.ans-by{font-size:.78rem;color:var(--grn);margin-bottom:8px}
+.ans-text{font-size:.9rem;line-height:1.8;white-space:pre-wrap}
+.lawyer-switcher{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.lsw{padding:8px 16px;border:1px solid rgba(201,168,76,.2);border-radius:7px;
+  background:transparent;color:var(--dim);cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.85rem;transition:all .2s}
+.lsw.on{background:rgba(201,168,76,.1);border-color:var(--gold);color:var(--gold);font-weight:700}
+.dash-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+.dash-card{background:var(--bg3);border:1px solid rgba(201,168,76,.13);border-radius:12px;padding:20px;text-align:center}
+.dash-num{font-size:1.9rem;font-weight:900;color:var(--gold)}
+.dash-num.grn{color:var(--grn)}
+.dash-label{font-size:.78rem;color:var(--dim);margin-top:4px}
+.reply-btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn-reply{padding:9px 18px;background:transparent;border:1px solid rgba(201,168,76,.3);
+  border-radius:7px;color:var(--gold);font-family:'Tajawal',sans-serif;font-size:.87rem;cursor:pointer}
+.btn-reply:disabled{opacity:.4;cursor:not-allowed}
+.reply-area{margin-top:14px}
+.reply-ta{width:100%;background:var(--bg4);border:1px solid rgba(201,168,76,.2);border-radius:9px;
+  padding:12px;color:var(--txt);font-family:'Tajawal',sans-serif;font-size:.93rem;min-height:90px;resize:vertical;direction:rtl;line-height:1.8}
+.reply-ta:focus{outline:none;border-color:rgba(201,168,76,.45)}
+.reply-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;gap:8px}
+.earn-note{font-size:.8rem;color:var(--grn)}
+.btn-send{padding:10px 20px;background:var(--gold);border:none;border-radius:7px;color:#000;
+  font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:900;cursor:pointer}
+.btn-send:disabled{opacity:.35;cursor:not-allowed}
+.btn-cancel{padding:10px 16px;background:transparent;border:1px solid rgba(201,168,76,.2);
+  border-radius:7px;color:var(--dim);font-family:'Tajawal',sans-serif;cursor:pointer}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.fg.full{grid-column:1/-1}
+.flabel{font-size:.8rem;color:var(--dim)}
+.fin{background:var(--bg4);border:1px solid rgba(201,168,76,.2);border-radius:8px;
+  padding:11px 14px;color:var(--txt);font-family:'Tajawal',sans-serif;font-size:.92rem;direction:rtl}
+.fin:focus{outline:none;border-color:rgba(201,168,76,.45)}
+.btn-reg{width:100%;margin-top:16px;padding:14px;background:linear-gradient(135deg,var(--gold-d),var(--gold));
+  border:none;border-radius:9px;color:#000;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:900;cursor:pointer}
+.btn-reg:disabled{opacity:.4;cursor:not-allowed}
+.success{text-align:center;padding:48px 24px;background:var(--bg3);border:1px solid rgba(61,174,111,.25);border-radius:16px}
+.success-icon{font-size:2.8rem;margin-bottom:14px}
+.success-title{font-family:'Amiri',serif;font-size:1.7rem;color:var(--grn);margin-bottom:8px}
+.success-msg{color:var(--dim);line-height:1.9}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;z-index:999;padding:20px}
+.overlay.on{display:flex}
+.modal{background:var(--bg2);border:1px solid rgba(201,168,76,.3);border-radius:18px;
+  padding:32px;max-width:440px;width:100%;max-height:90vh;overflow-y:auto}
+.modal-title{font-family:'Amiri',serif;font-size:1.45rem;color:var(--gold);margin-bottom:6px}
+.modal-sub{color:var(--dim);font-size:.87rem;margin-bottom:22px;line-height:1.7}
+.modal-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.modal-label{font-size:.82rem;color:var(--dim)}
+.modal-in{background:var(--bg4);border:1px solid rgba(201,168,76,.2);border-radius:9px;
+  padding:12px 14px;color:var(--txt);font-family:'Tajawal',sans-serif;font-size:.95rem;direction:rtl}
+.modal-in:focus{outline:none;border-color:rgba(201,168,76,.5)}
+.modal-in.err{border-color:rgba(224,85,85,.5)}
+.err-msg{font-size:.78rem;color:var(--red);margin-top:4px;display:none}
+.otp-boxes{display:flex;gap:10px;justify-content:center;direction:ltr;margin:14px 0}
+.otp-box{width:54px;height:58px;background:var(--bg4);border:1px solid rgba(201,168,76,.2);
+  border-radius:10px;text-align:center;font-size:1.5rem;font-weight:900;color:var(--gold)}
+.otp-box:focus{outline:none;border-color:rgba(201,168,76,.6)}
+.otp-hint{font-size:.75rem;color:var(--dim);text-align:center}
+.otp-hint b{color:var(--gold)}
+.btn-primary{width:100%;padding:14px;background:var(--gold);border:none;border-radius:10px;
+  color:#000;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:900;cursor:pointer;margin-top:6px}
+.btn-primary:disabled{opacity:.35;cursor:not-allowed;background:var(--bg4);color:var(--dim)}
+.btn-secondary{width:100%;padding:10px;background:transparent;border:none;color:var(--dim);
+  font-family:'Tajawal',sans-serif;cursor:pointer;margin-top:8px;font-size:.87rem}
+.modal-q-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.modal-q-item{background:var(--bg3);border:1px solid rgba(201,168,76,.12);border-radius:9px;
+  padding:12px;display:flex;justify-content:space-between;gap:10px}
+.modal-q-text{font-size:.83rem;line-height:1.6;flex:1}
+.modal-q-price{font-size:.82rem;color:var(--gold);font-weight:700;white-space:nowrap}
+.modal-total{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.18);
+  border-radius:11px;padding:16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.modal-total-label{color:var(--dim);font-size:.9rem}
+.modal-total-amount{font-size:2rem;font-weight:900;color:var(--gold)}
+.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.pay-m{padding:12px;border:1px solid rgba(201,168,76,.18);border-radius:9px;
+  background:var(--bg3);color:var(--dim);cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.88rem;text-align:center}
+.pay-m.on{border-color:var(--gold);background:rgba(201,168,76,.1);color:var(--gold)}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
+  background:var(--grn);color:#fff;padding:12px 28px;border-radius:50px;
+  font-weight:700;font-size:.9rem;z-index:9999;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.on{opacity:1}
+.spinner{width:32px;height:32px;border:3px solid rgba(201,168,76,.2);border-top-color:var(--gold);
+  border-radius:50%;animation:spin .8s linear infinite;margin:20px auto}
+.empty{text-align:center;padding:60px 20px;color:var(--dim)}
+.empty-icon{font-size:2.5rem;margin-bottom:12px;opacity:.4}
+.countdown{font-size:.78rem;color:var(--dim);text-align:center;margin-top:8px}
+.countdown a{color:var(--gold);cursor:pointer}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:600px){
+  .nav{padding:14px 16px}
+  .tabs .tab{padding:7px 10px;font-size:.78rem}
+  .dash-cards{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  .fg.full{grid-column:1}
+}
+</style>
 </head>
 <body>
-<p dir="rtl" class="p1"><span class="s1">مستشاري</span></p>
-<p dir="rtl" class="p2"><span class="s1">منصة</span><span class="s2"> </span><span class="s1">الاستشارات</span><span class="s2"> </span><span class="s1">القانونية</span></p>
-<p dir="rtl" class="p3"><span class="s3">🙋</span><span class="s4"> </span><span class="s5">عميل</span></p>
-<p dir="rtl" class="p4"><span class="s6">⚖️</span><span class="s7"> </span><span class="s1">محامي</span></p>
-<p dir="rtl" class="p4"><span class="s6">📋</span><span class="s7"> </span><span class="s1">تسجيل</span><span class="s7"> </span><span class="s1">محامي</span></p>
-<p dir="rtl" class="p5"><span class="s5">اطرح</span><span class="s8"> </span><span class="s5">سؤالك</span><span class="s8"> </span><span class="s5">القانوني</span></p>
-<p dir="rtl" class="p6"><span class="s5">سيرد</span><span class="s9"> </span><span class="s5">عليك</span><span class="s9"> </span><span class="s5">أحد</span><span class="s9"> </span><span class="s5">المحامين</span><span class="s9"> </span><span class="s5">المعتمدين</span><span class="s9"> · </span><span class="s5">السؤال</span><span class="s9"> </span><span class="s5">الأول</span><span class="s9"> 10 </span><span class="s5">ريال</span></p>
-<p dir="rtl" class="p7"><span class="s10">⚠️</span><span class="s11"> </span><span class="s12">تنبيه</span><span class="s13"> </span><span class="s12">هام</span><span class="s13">:</span><span class="s11"> </span><span class="s5">لا</span><span class="s11"> </span><span class="s5">يُقبل</span><span class="s11"> </span><span class="s5">كتابة</span><span class="s11"> </span><span class="s5">أكثر</span><span class="s11"> </span><span class="s5">من</span><span class="s11"> </span><span class="s5">سؤال</span><span class="s11"> </span><span class="s5">واحد</span><span class="s11"> </span><span class="s5">في</span><span class="s11"> </span><span class="s5">الخانة</span><span class="s11"> </span><span class="s5">الواحدة</span><span class="s11">. </span><span class="s5">في</span><span class="s11"> </span><span class="s5">حال</span><span class="s11"> </span><span class="s5">كتابة</span><span class="s11"> </span><span class="s5">أكثر</span><span class="s11"> </span><span class="s5">من</span><span class="s11"> </span><span class="s5">سؤال</span><span class="s11"> </span><span class="s12">سيُجيب</span><span class="s13"> </span><span class="s12">المحامي</span><span class="s13"> </span><span class="s12">على</span><span class="s13"> </span><span class="s12">السؤال</span><span class="s13"> </span><span class="s12">الأول</span><span class="s13"> </span><span class="s12">فقط</span><span class="s11"> </span><span class="s5">ولن</span><span class="s11"> </span><span class="s5">يُردّ</span><span class="s11"> </span><span class="s5">المبلغ</span><span class="s11">.</span></p>
-<p dir="rtl" class="p8"><span class="s5"></span><br></p>
-<p dir="rtl" class="p9"><span class="s14">＋</span><span class="s15"> </span><span class="s16">إضافة</span><span class="s15"> </span><span class="s16">سؤال</span><span class="s15"> </span><span class="s16">آخر</span><span class="s15"> — 7 </span><span class="s16">ريال</span></p>
-<p dir="rtl" class="p10"><span class="s16">المجموع</span><span class="s17">: </span><span class="s18">10</span><span class="s17"> </span><span class="s16">ريال</span></p>
-<p dir="rtl" class="p11"><span class="s16">الدفع</span><span class="s19"> </span><span class="s16">وإرسال</span><span class="s19"> </span><span class="s16">الأسئلة</span><span class="s19"> ←</span></p>
-<p dir="rtl" class="p8"><span class="s5"></span><br></p>
-<p dir="rtl" class="p12"><span class="s5"></span><br></p>
+ 
+<nav class="nav">
+  <div class="logo">مستشاري <small>منصة الاستشارات القانونية</small></div>
+  <div class="tabs">
+    <button class="tab on" onclick="switchTab('client',this)">🙋 عميل</button>
+    <button class="tab" onclick="switchTab('lawyer',this)">⚖️ محامي</button>
+    <button class="tab" onclick="switchTab('register',this)">📋 تسجيل محامي</button>
+  </div>
+</nav>
+ 
+<!-- CLIENT -->
+<div class="page on" id="page-client">
+  <div class="page-title">اطرح سؤالك القانوني</div>
+  <div class="page-sub">سيرد عليك أحد المحامين المعتمدين · السؤال الأول 10 ريال</div>
+  <div class="card">
+    <div id="client-bar" style="display:none" class="client-bar">
+      <div><div class="name" id="cb-name"></div><div class="phone" id="cb-phone"></div></div>
+      <button class="btn-logout" onclick="logout()">تسجيل الخروج</button>
+    </div>
+    <div class="warn">⚠️ <strong>تنبيه هام:</strong> لا يُقبل كتابة أكثر من سؤال واحد في الخانة الواحدة. في حال كتابة أكثر من سؤال <strong>سيُجيب المحامي على السؤال الأول فقط</strong> ولن يُردّ المبلغ.</div>
+    <div id="drafts-container"></div>
+    <button class="btn-add-q" onclick="addDraft()">＋ إضافة سؤال آخر — 7 ريال</button>
+    <div class="submit-row">
+      <div class="total-label">المجموع: <strong id="total-display">10</strong> ريال</div>
+      <button class="btn-pay" id="btn-submit" onclick="handleSubmit()" disabled>الدفع وإرسال الأسئلة ←</button>
+    </div>
+  </div>
+  <div id="questions-feed"></div>
+</div>
+ 
+<!-- LAWYER -->
+<div class="page" id="page-lawyer">
+  <div class="page-title">لوحة المحامي</div>
+  <div class="page-sub">اختر حسابك وابدأ بالإجابة</div>
+  <div class="lawyer-switcher" id="lawyer-switcher"></div>
+  <div class="dash-cards">
+    <div class="dash-card"><div class="dash-num" id="d-answered">0</div><div class="dash-label">سؤال أجبته</div></div>
+    <div class="dash-card"><div class="dash-num grn" id="d-earned">0 ر</div><div class="dash-label">إجمالي المكتسبات</div></div>
+    <div class="dash-card"><div class="dash-num" id="d-open">0</div><div class="dash-label">سؤال ينتظرك</div></div>
+  </div>
+  <div class="page-sub" style="margin-bottom:14px">الأسئلة المفتوحة</div>
+  <div id="open-questions"></div>
+  <div class="page-sub" style="margin-top:32px;margin-bottom:14px">الأسئلة المجاب عليها</div>
+  <div id="answered-questions"></div>
+</div>
+ 
+<!-- REGISTER -->
+<div class="page" id="page-register">
+  <div class="page-title">تسجيل محامي جديد</div>
+  <div class="page-sub">انضم إلى مستشاري وابدأ باكتساب 10 ريال على كل إجابة</div>
+  <div id="register-content">
+    <div class="card">
+      <div class="form-grid">
+        <div class="fg"><label class="flabel">الاسم الكامل *</label><input class="fin" id="r-name" placeholder="أ. محمد أحمد"></div>
+        <div class="fg"><label class="flabel">رقم الجوال *</label><input class="fin" id="r-phone" placeholder="05xxxxxxxx"></div>
+        <div class="fg"><label class="flabel">رقم الترخيص *</label><input class="fin" id="r-license" placeholder="SA-2025-XXXX"></div>
+        <div class="fg"><label class="flabel">سنوات الخبرة *</label><input class="fin" id="r-exp" type="number" placeholder="8"></div>
+        <div class="fg full"><label class="flabel">نبذة مختصرة</label><textarea class="fin" id="r-bio" rows="3" placeholder="اكتب نبذة..."></textarea></div>
+      </div>
+      <button class="btn-reg" onclick="submitRegister()">تقديم طلب الانضمام ←</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- AUTH MODAL -->
+<div class="overlay" id="auth-modal">
+  <div class="modal">
+    <div id="auth-info-step">
+      <div class="modal-title">🔐 تحقق من هويتك</div>
+      <div class="modal-sub">أدخل اسمك ورقم جوالك للمتابعة</div>
+      <div class="modal-field">
+        <label class="modal-label">الاسم الكامل *</label>
+        <input class="modal-in" id="auth-name" placeholder="محمد أحمد">
+        <div class="err-msg" id="name-err">الاسم مطلوب</div>
+      </div>
+      <div class="modal-field">
+        <label class="modal-label">رقم الجوال * (05xxxxxxxx)</label>
+        <input class="modal-in" id="auth-phone" placeholder="05xxxxxxxx" maxlength="10" inputmode="numeric">
+        <div class="err-msg" id="phone-err">أدخل رقم جوال صحيح يبدأ بـ 05</div>
+      </div>
+      <button class="btn-primary" id="btn-send-otp" onclick="sendOtp()">إرسال رمز التحقق ←</button>
+      <button class="btn-secondary" onclick="closeModal('auth-modal')">إلغاء</button>
+    </div>
+    <div id="auth-otp-step" style="display:none">
+      <div class="modal-title">🔐 رمز التحقق</div>
+      <div class="modal-sub" id="otp-sub"></div>
+      <div class="otp-boxes">
+        <input class="otp-box" id="otp0" maxlength="1" inputmode="numeric" oninput="otpInput(0)" onkeydown="otpKey(0,event)">
+        <input class="otp-box" id="otp1" maxlength="1" inputmode="numeric" oninput="otpInput(1)" onkeydown="otpKey(1,event)">
+        <input class="otp-box" id="otp2" maxlength="1" inputmode="numeric" oninput="otpInput(2)" onkeydown="otpKey(2,event)">
+        <input class="otp-box" id="otp3" maxlength="1" inputmode="numeric" oninput="otpInput(3)" onkeydown="otpKey(3,event)">
+      </div>
+      <div class="otp-hint">للتجربة: الرمز هو <b>1234</b></div>
+      <div class="err-msg" id="otp-err" style="text-align:center;margin-top:8px">رمز التحقق غير صحيح</div>
+      <button class="btn-primary" id="btn-verify" onclick="verifyOtp()" disabled>تحقق وأكمل ✓</button>
+      <div class="countdown" id="countdown-wrap"></div>
+      <button class="btn-secondary" onclick="backToInfo()">← تغيير الرقم</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- PAY MODAL -->
+<div class="overlay" id="pay-modal">
+  <div class="modal">
+    <div class="modal-title">💳 مراجعة الطلب والدفع</div>
+    <div class="modal-sub">ادفع وستُنشر أسئلتك للمحامين فوراً</div>
+    <div class="modal-q-list" id="pay-q-list"></div>
+    <div class="modal-total">
+      <div class="modal-total-label" id="pay-total-label"></div>
+      <div class="modal-total-amount" id="pay-total-amount"></div>
+    </div>
+    <div class="pay-methods">
+      <button class="pay-m on" onclick="selectPay('mada',this)">🏦 مدى</button>
+      <button class="pay-m" onclick="selectPay('apple',this)">🍎 Apple Pay</button>
+      <button class="pay-m" onclick="selectPay('stc',this)">📱 STC Pay</button>
+      <button class="pay-m" onclick="selectPay('visa',this)">💳 Visa</button>
+    </div>
+    <button class="btn-primary" id="btn-confirm-pay" onclick="processPayment()">ادفع وأرسل الأسئلة ✓</button>
+    <button class="btn-secondary" onclick="closeModal('pay-modal')">إلغاء</button>
+  </div>
+</div>
+ 
+<div class="toast" id="toast"></div>
+ 
+<script>
+// ─── Supabase ─────────────────────────────────────────────────────────────────
+const { createClient } = supabase;
+const sb = createClient(
+  'https://lfscfnvmgesxkartoxcg.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxmc2NmbnZtZ2VzeGthcnRveGNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM1NzMsImV4cCI6MjA5NjI1OTU3M30.LQWFXOC9Vp2HeW9ubcTX8dmcaHl8USjlHN3qlaFqKBM'
+);
+ 
+const TAB_PK = 'pk_live_Q7caE2YmdZVeBlq5Igvz4L0n';
+ 
+// ─── State ────────────────────────────────────────────────────────────────────
+let client         = null;
+let drafts         = [{ id: 1, text: '', price: 10 }];
+let draftId        = 2;
+let activeLawyerId = null;
+let lawyers        = [];
+let questions      = [];
+let selectedPayM   = 'mada';
+let countdown      = 0;
+let cdTimer        = null;
+ 
+// ─── Init ─────────────────────────────────────────────────────────────────────
+async function init() {
+  await loadLawyers();
+  await loadQuestions();
+  renderDrafts();
+  renderQuestionsFeed();
+ 
+  // Realtime updates
+  sb.channel('questions').on('postgres_changes',
+    { event: '*', schema: 'public', table: 'questions' },
+    () => { loadQuestions().then(renderQuestionsFeed); }
+  ).subscribe();
+}
+ 
+// ─── Supabase Queries ─────────────────────────────────────────────────────────
+async function loadLawyers() {
+  const { data } = await sb.from('lawyers').select('*').order('id');
+  if (data && data.length) {
+    lawyers = data;
+    activeLawyerId = lawyers[0].id;
+  } else {
+    // Default lawyers if table empty
+    lawyers = [
+      { id: 1, name: 'أ. محمد العمري',  avatar: 'م', earned: 0, answered: 0 },
+      { id: 2, name: 'أ. سارة الحربي',  avatar: 'س', earned: 0, answered: 0 },
+      { id: 3, name: 'أ. خالد الغامدي', avatar: 'خ', earned: 0, answered: 0 },
+    ];
+    activeLawyerId = 1;
+  }
+}
+ 
+async function loadQuestions() {
+  const { data } = await sb.from('questions').select('*').order('created_at', { ascending: false });
+  if (data) questions = data;
+}
+ 
+async function saveQuestion(q) {
+  const { data, error } = await sb.from('questions').insert([{
+    client_name:  q.clientName,
+    client_phone: q.clientPhone,
+    text:         q.text,
+    status:       'open',
+    price:        q.price,
+  }]).select().single();
+  return data;
+}
+ 
+async function saveAnswer(questionId, answer, lawyerName, lawyerDbId) {
+  await sb.from('questions').update({
+    status:      'answered',
+    answer:      answer,
+    answered_by: lawyerName,
+  }).eq('id', questionId);
+ 
+  // Update lawyer stats
+  const lawyer = lawyers.find(l => l.id === lawyerDbId);
+  if (lawyer) {
+    const price = questions.find(q => q.id === questionId)?.price || 10;
+    await sb.from('lawyers').update({
+      earned:   (lawyer.earned || 0) + price,
+      answered: (lawyer.answered || 0) + 1,
+    }).eq('id', lawyerDbId);
+    lawyer.earned   = (lawyer.earned || 0) + price;
+    lawyer.answered = (lawyer.answered || 0) + 1;
+  }
+}
+ 
+async function saveLawyer(data) {
+  await sb.from('lawyers').insert([{
+    name:       data.name,
+    phone:      data.phone,
+    license:    data.license,
+    experience: data.experience,
+    bio:        data.bio,
+    avatar:     data.name[2] || 'م',
+    earned:     0,
+    answered:   0,
+    status:     'pending',
+  }]);
+}
+ 
+// ─── Tab Switcher ─────────────────────────────────────────────────────────────
+function switchTab(tab, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('page-' + tab).classList.add('on');
+  if (tab === 'lawyer') renderLawyerPage();
+}
+ 
+// ─── Toast ────────────────────────────────────────────────────────────────────
+function showToast(msg, clr) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.background = clr || 'var(--grn)';
+  t.classList.add('on');
+  setTimeout(() => t.classList.remove('on'), 3000);
+}
+ 
+// ─── Modal ────────────────────────────────────────────────────────────────────
+function openModal(id)  { document.getElementById(id).classList.add('on'); }
+function closeModal(id) { document.getElementById(id).classList.remove('on'); }
+ 
+// ─── Drafts ───────────────────────────────────────────────────────────────────
+function renderDrafts() {
+  document.getElementById('drafts-container').innerHTML = drafts.map((d, i) => `
+    <div class="draft-item" id="draft-${d.id}">
+      <div class="draft-header">
+        <div class="draft-label">
+          <span class="draft-title">${i===0?'السؤال الأول':'سؤال إضافي '+i}</span>
+          <span class="draft-price">${i===0?10:7} ريال</span>
+        </div>
+        ${drafts.length>1?`<button class="btn-del" onclick="removeDraft(${d.id})">✕</button>`:''}
+      </div>
+      <textarea class="draft-ta" placeholder="اكتب سؤالك هنا... (سؤال واحد فقط)"
+        maxlength="600" oninput="updateDraft(${d.id},this.value)">${d.text}</textarea>
+      <div class="char-count">${d.text.length}/600</div>
+    </div>
+  `).join('');
+  updateTotal();
+}
+ 
+function updateDraft(id, val) {
+  const d = drafts.find(x => x.id===id); if(d) d.text=val;
+  const el = document.querySelector(`#draft-${id} .char-count`);
+  if(el) el.textContent = val.length+'/600';
+  updateTotal();
+}
+ 
+function addDraft()       { drafts.push({id:draftId++,text:'',price:7}); renderDrafts(); }
+function removeDraft(id)  { drafts=drafts.filter(d=>d.id!==id); renderDrafts(); }
+ 
+function updateTotal() {
+  document.getElementById('total-display').textContent = drafts.reduce((s,d)=>s+d.price,0);
+  document.getElementById('btn-submit').disabled = !drafts.some(d=>d.text.trim());
+}
+ 
+// ─── Auth ─────────────────────────────────────────────────────────────────────
+function handleSubmit() {
+  if (!client) { openModal('auth-modal'); return; }
+  showPayModal();
+}
+ 
+function sendOtp() {
+  const name  = document.getElementById('auth-name').value.trim();
+  const phone = document.getElementById('auth-phone').value.trim();
+  let err = false;
+  if (!name)                { document.getElementById('name-err').style.display='block';  err=true; }
+  else                      { document.getElementById('name-err').style.display='none'; }
+  if(!/^05\d{8}$/.test(phone)){ document.getElementById('phone-err').style.display='block'; err=true; }
+  else                      { document.getElementById('phone-err').style.display='none'; }
+  if(err) return;
+  const btn=document.getElementById('btn-send-otp');
+  btn.textContent='⏳ جاري الإرسال...'; btn.disabled=true;
+  setTimeout(()=>{
+    document.getElementById('auth-info-step').style.display='none';
+    document.getElementById('auth-otp-step').style.display='block';
+    document.getElementById('otp-sub').textContent=`تم إرسال رمز التحقق إلى ${phone}`;
+    [0,1,2,3].forEach(i=>{ document.getElementById('otp'+i).value=''; });
+    document.getElementById('otp-err').style.display='none';
+    document.getElementById('btn-verify').disabled=true;
+    startCountdown();
+    btn.textContent='إرسال رمز التحقق ←'; btn.disabled=false;
+  },1200);
+}
+ 
+function otpInput(i) {
+  const val=document.getElementById('otp'+i).value.replace(/\D/g,'');
+  document.getElementById('otp'+i).value=val.slice(-1);
+  if(val&&i<3) document.getElementById('otp'+(i+1)).focus();
+  const full=[0,1,2,3].map(x=>document.getElementById('otp'+x).value).join('');
+  document.getElementById('btn-verify').disabled=full.length<4;
+}
+ 
+function otpKey(i,e) {
+  if(e.key==='Backspace'&&!document.getElementById('otp'+i).value&&i>0)
+    document.getElementById('otp'+(i-1)).focus();
+}
+ 
+function verifyOtp() {
+  const otp=[0,1,2,3].map(i=>document.getElementById('otp'+i).value).join('');
+  if(otp==='1234') {
+    client={name:document.getElementById('auth-name').value.trim(), phone:document.getElementById('auth-phone').value.trim()};
+    closeModal('auth-modal');
+    updateClientBar();
+    setTimeout(()=>showPayModal(),300);
+  } else {
+    document.getElementById('otp-err').style.display='block';
+    [0,1,2,3].forEach(i=>document.getElementById('otp'+i).value='');
+    document.getElementById('otp0').focus();
+  }
+}
+ 
+function backToInfo() {
+  document.getElementById('auth-info-step').style.display='block';
+  document.getElementById('auth-otp-step').style.display='none';
+}
+ 
+function startCountdown() {
+  clearInterval(cdTimer); countdown=60;
+  const el=document.getElementById('countdown-wrap');
+  el.textContent=`إعادة الإرسال بعد ${countdown}ث`;
+  cdTimer=setInterval(()=>{
+    countdown--;
+    if(countdown>0) el.textContent=`إعادة الإرسال بعد ${countdown}ث`;
+    else { clearInterval(cdTimer); el.innerHTML=`<a onclick="sendOtp()">إعادة إرسال الرمز</a>`; }
+  },1000);
+}
+ 
+function updateClientBar() {
+  if(!client){document.getElementById('client-bar').style.display='none';return;}
+  document.getElementById('client-bar').style.display='flex';
+  document.getElementById('cb-name').textContent='👤 '+client.name;
+  document.getElementById('cb-phone').textContent='✅ '+client.phone+' — تم التحقق';
+}
+ 
+function logout() { client=null; updateClientBar(); }
+ 
+// ─── Pay Modal ────────────────────────────────────────────────────────────────
+function showPayModal() {
+  const filled=drafts.filter(d=>d.text.trim());
+  const total=filled.reduce((s,d)=>s+d.price,0);
+  document.getElementById('pay-q-list').innerHTML=filled.map((d,i)=>`
+    <div class="modal-q-item">
+      <div>
+        <div style="font-size:.72rem;color:var(--dim);margin-bottom:4px">${i===0?'السؤال الأول':'سؤال إضافي '+i}</div>
+        <div class="modal-q-text">${d.text.length>80?d.text.slice(0,80)+'...':d.text}</div>
+      </div>
+      <div class="modal-q-price">${d.price} ر</div>
+    </div>`).join('');
+  document.getElementById('pay-total-label').textContent=`الإجمالي (${filled.length} سؤال)`;
+  document.getElementById('pay-total-amount').textContent=total+' ريال';
+  document.getElementById('btn-confirm-pay').textContent=`ادفع ${total} ريال وأرسل الأسئلة ✓`;
+  openModal('pay-modal');
+}
+ 
+function selectPay(m,el) {
+  selectedPayM=m;
+  document.querySelectorAll('.pay-m').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+}
+ 
+async function processPayment() {
+  const btn=document.getElementById('btn-confirm-pay');
+  btn.textContent='⏳ جاري الدفع...'; btn.disabled=true;
+  // Tab Payments integration here
+  setTimeout(async()=>{ await confirmQuestions(); btn.disabled=false; },1500);
+}
+ 
+async function confirmQuestions() {
+  const filled=drafts.filter(d=>d.text.trim());
+  for(const d of filled) {
+    await saveQuestion({ clientName:client.name, clientPhone:client.phone, text:d.text, price:d.price });
+  }
+  drafts=[{id:draftId++,text:'',price:10}];
+  closeModal('pay-modal');
+  await loadQuestions();
+  renderDrafts();
+  renderQuestionsFeed();
+  showToast(`✅ تم إرسال ${filled.length} سؤال للمحامين`);
+}
+ 
+// ─── Questions Feed ───────────────────────────────────────────────────────────
+function renderQuestionsFeed() {
+  const c=document.getElementById('questions-feed');
+  if(!questions.length){c.innerHTML='<div class="empty"><div class="empty-icon">📭</div>لا توجد أسئلة بعد</div>';return;}
+  c.innerHTML=questions.map(q=>`
+    <div class="q-card ${q.status}">
+      <div class="q-top">
+        <div class="q-client">
+          <div class="q-av">${(q.client_name||'؟')[0]}</div>
+          <div><div class="q-name">${q.client_name||'مجهول'}</div><div class="q-time">${formatTime(q.created_at)}</div></div>
+        </div>
+        <div class="q-badges">
+          <span class="badge badge-price">💰 ${q.price} ر</span>
+          <span class="badge ${q.status==='open'?'badge-open':'badge-ans'}">${q.status==='open'?'⏳ ينتظر':'✅ تم الرد'}</span>
+        </div>
+      </div>
+      <div class="q-text">${q.text}</div>
+      ${q.answer?`<div class="ans-box"><div class="ans-by">⚖️ ${q.answered_by}</div><div class="ans-text">${q.answer}</div></div>`:''}
+    </div>`).join('');
+}
+ 
+function formatTime(ts) {
+  if(!ts) return 'الآن';
+  const diff=Math.floor((Date.now()-new Date(ts))/60000);
+  if(diff<1) return 'الآن';
+  if(diff<60) return `منذ ${diff} دقيقة`;
+  return `منذ ${Math.floor(diff/60)} ساعة`;
+}
+ 
+// ─── Lawyer Page ──────────────────────────────────────────────────────────────
+function renderLawyerPage() {
+  const lawyer=lawyers.find(l=>l.id===activeLawyerId)||lawyers[0];
+  const openQs=questions.filter(q=>q.status==='open');
+  const ansQs=questions.filter(q=>q.status==='answered');
+ 
+  document.getElementById('lawyer-switcher').innerHTML=lawyers.map(l=>`
+    <button class="lsw ${l.id===activeLawyerId?'on':''}" onclick="switchLawyer(${l.id})">${l.name}</button>`).join('');
+ 
+  document.getElementById('d-answered').textContent=lawyer.answered||0;
+  document.getElementById('d-earned').textContent=(lawyer.earned||0)+' ر';
+  document.getElementById('d-open').textContent=openQs.length;
+ 
+  const oc=document.getElementById('open-questions');
+  if(!openQs.length){oc.innerHTML='<div class="empty"><div class="empty-icon">🎉</div>أُجيب على جميع الأسئلة!</div>';}
+  else {
+    oc.innerHTML=openQs.map(q=>`
+      <div class="q-card open" id="lq-${q.id}">
+        <div class="q-top">
+          <div class="q-client">
+            <div class="q-av">${(q.client_name||'؟')[0]}</div>
+            <div><div class="q-name">${q.client_name||'مجهول'}</div><div class="q-time">${formatTime(q.created_at)}</div></div>
+          </div>
+          <div class="q-badges">
+            <span class="badge badge-price">💰 ${q.price} ر</span>
+            <span class="badge badge-open">⏳ مفتوح</span>
+          </div>
+        </div>
+        <div class="q-text">${q.text}</div>
+        <div class="reply-btns" id="rbtn-${q.id}">
+          <button class="btn-reply" onclick="openReply('${q.id}')">✍️ أجب واكسب ${q.price} ريال</button>
+          <button class="btn-reply" id="ai-btn-${q.id}" onclick="generateAI('${q.id}')">🤖 توليد بالذكاء الاصطناعي</button>
+        </div>
+        <div class="reply-area" id="reply-area-${q.id}" style="display:none">
+          <textarea class="reply-ta" id="reply-ta-${q.id}" placeholder="اكتب إجابتك القانونية هنا..."></textarea>
+          <div class="reply-footer">
+            <span class="earn-note">💰 ستكسب ${q.price} ريال</span>
+            <div style="display:flex;gap:8px">
+              <button class="btn-cancel" onclick="cancelReply('${q.id}')">إلغاء</button>
+              <button class="btn-send" id="send-btn-${q.id}" onclick="submitAnswer('${q.id}')" disabled>إرسال ✓</button>
+            </div>
+          </div>
+        </div>
+      </div>`).join('');
+    openQs.forEach(q=>{
+      const ta=document.getElementById(`reply-ta-${q.id}`);
+      if(ta) ta.addEventListener('input',()=>{ document.getElementById(`send-btn-${q.id}`).disabled=!ta.value.trim(); });
+    });
+  }
+ 
+  document.getElementById('answered-questions').innerHTML=ansQs.length?ansQs.map(q=>`
+    <div class="q-card answered">
+      <div class="q-top">
+        <div class="q-client">
+          <div class="q-av">${(q.client_name||'؟')[0]}</div>
+          <div><div class="q-name">${q.client_name||'مجهول'}</div><div class="q-time">${formatTime(q.created_at)}</div></div>
+        </div>
+        <div class="q-badges">
+          <span class="badge badge-price">💰 ${q.price} ر</span>
+          <span class="badge badge-ans">✅ مجاب</span>
+        </div>
+      </div>
+      <div class="q-text">${q.text}</div>
+      <div class="ans-box"><div class="ans-by">⚖️ ${q.answered_by}</div><div class="ans-text">${q.answer}</div></div>
+    </div>`).join(''):'<div class="empty"><div class="empty-icon">📝</div>لا توجد إجابات بعد</div>';
+}
+ 
+function switchLawyer(id){ activeLawyerId=id; renderLawyerPage(); }
+ 
+function openReply(id){
+  document.getElementById(`rbtn-${id}`).style.display='none';
+  document.getElementById(`reply-area-${id}`).style.display='block';
+  document.getElementById(`reply-ta-${id}`).focus();
+}
+ 
+function cancelReply(id){
+  document.getElementById(`rbtn-${id}`).style.display='flex';
+  document.getElementById(`reply-area-${id}`).style.display='none';
+}
+ 
+async function generateAI(id) {
+  const q=questions.find(x=>x.id==id); if(!q) return;
+  const btn=document.getElementById(`ai-btn-${id}`);
+  btn.textContent='⏳ جاري التوليد...'; btn.disabled=true;
+  openReply(id);
+  const lawyer=lawyers.find(l=>l.id===activeLawyerId);
+  try {
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:1000,
+        messages:[{role:'user',content:`أنت ${lawyer.name}، محامٍ سعودي. أجب على هذا السؤال بثلاثة أجزاء:\n١. الإجابة المباشرة\n٢. الأساس النظامي\n٣. التوصية للعميل\nالسؤال: ${q.text}`}]
+      })
+    });
+    const data=await res.json();
+    const txt=data.content?.find(b=>b.type==='text')?.text||'';
+    document.getElementById(`reply-ta-${id}`).value=txt;
+    document.getElementById(`send-btn-${id}`).disabled=!txt.trim();
+  } catch(e) { document.getElementById(`reply-ta-${id}`).value='حدث خطأ، يرجى المحاولة.'; }
+  btn.textContent='🤖 توليد بالذكاء الاصطناعي'; btn.disabled=false;
+}
+ 
+async function submitAnswer(id) {
+  const ta=document.getElementById(`reply-ta-${id}`);
+  const txt=ta.value.trim(); if(!txt) return;
+  const lawyer=lawyers.find(l=>l.id===activeLawyerId);
+  await saveAnswer(id, txt, lawyer.name, activeLawyerId);
+  showToast(`✅ تم إرسال إجابتك`);
+  await loadQuestions();
+  await loadLawyers();
+  renderLawyerPage();
+  renderQuestionsFeed();
+}
+ 
+// ─── Register ─────────────────────────────────────────────────────────────────
+async function submitRegister() {
+  const name=document.getElementById('r-name').value.trim();
+  const phone=document.getElementById('r-phone').value.trim();
+  const license=document.getElementById('r-license').value.trim();
+  const exp=document.getElementById('r-exp').value.trim();
+  const bio=document.getElementById('r-bio').value.trim();
+  if(!name||!phone||!license||!exp){showToast('⚠️ يرجى ملء جميع الحقول','var(--red)');return;}
+  await saveLawyer({name,phone,license,experience:exp,bio});
+  document.getElementById('register-content').innerHTML=`
+    <div class="success">
+      <div class="success-icon">✅</div>
+      <div class="success-title">تم استلام طلبك!</div>
+      <p class="success-msg">شكراً ${name}،<br>سيتم مراجعة بياناتك خلال 24-48 ساعة<br>وسنتواصل معك على <strong style="color:var(--gold)">${phone}</strong> لتفعيل حسابك.</p>
+    </div>`;
+}
+ 
+init();
+</script>
 </body>
 </html>
